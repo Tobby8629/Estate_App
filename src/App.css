@@ -1,38 +1,286 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,900;1,100;1,300&family=Saira:ital,wght@0,100;0,200;0,400;0,500;0,600;1,100;1,300&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Poppins', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.header {
+  background-image: linear-gradient(200.44deg, rgba(0, 0, 0, 0.0001) 16.41%, rgba(0, 0, 0, 0.51) 77.16%), url(./images/etienne-beauregard-riverin-B0aCvAVSX8E-unsplashbg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 70vh;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid white;
+  padding: 10px 0;
+  height: 15%;
+  width: 100%;
+}
+
+.menu {
+  z-index: 999;
+  transition: 0.3s all linear;
+}
+
+.menu i {
+  font-size: 30px;
+  color: white;
+}
+
+.header ul {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(7, 7, 96, 0.57);
+  backdrop-filter: blur(2px);
+  margin: 0;
+  padding: 1rem;
+  transition: 0.3s all linear;
+}
+
+.hide {
+  top: -100%;
+}
+
+.show {
+  top: 0;
+  z-index: 99;
+}
+
+.header li {
+  list-style: none;
+  margin: 2rem 1rem;
+  padding: 0.5rem 0;
+}
+
+.header a {
+  color: white;
+  text-transform: capitalize;
+  font-size: 23px;
+  text-decoration: none;
+  transition: 0.2s all linear;
+}
+
+.header main {
+  display: flex;
+  height: 85%;
+  width: 100%;
+  position: relative;
+}
+
+.header main h2 {
+  font-size: 25px;
+  color: rgba(255, 255, 255, 0.853);
+  text-transform: capitalize;
+  position: absolute;
+  width: 250px;
+  bottom: 20px;
+  margin: 0;
+}
+
+.header main .frame {
+  display: none;
+}
+
+/******************* section ****************************/
+
+section {
+  margin: 1rem;
+  
+}
+
+section h3 {
+  color: rgb(47, 47, 47);
+  font-size: 14.5px;
+  position: relative;
+  width: fit-content;
+  margin: 1.5rem 0;
+}
+
+section h3::after {
+  content: "";
+  position: absolute;
+  width: 25%;
+  height: 2px;
+  background-color: rgb(250, 79, 16);
+  border-radius: 8px;
+  left: 0;
+  bottom: 0px;
+}
+
+/******************* section1 ****************************/
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  gap: 1rem;
+}
+
+.desktop {
+  display: none;
+}
+
+.each {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.each img {
+  box-shadow: 0px 0px 5px 3px rgb(237, 237, 237);
+  padding: .5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+/******************* section1 ****************************/
+
+@media (min-width: 768px) {
+  .header nav ul {
+    position: unset;
+    height: auto;
+    background-color: transparent;
+    display: flex;
+    backdrop-filter: unset;
+    width: auto;
+    padding: 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  .header {
+    height: 100vh;
+    padding: 3rem;
   }
+
+  .header nav li {
+    padding: 0;
+    margin: 0 0.5rem;
+  }
+
+  .header nav .menu {
+    display: none;
+  }
+
+  .header nav li a:hover {
+    border-bottom: 2px solid rgba(3, 3, 100, 0.898);
+  }
+
+  .header main {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .header main h2 {
+    position: unset;
+    width: 48%;
+    font-size: 40px;
+  }
+
+  .header main .frame {
+    display: block;
+    width: 48%;
+    height: 65%;
+  }
+
+  .frame iframe {
+    width: 100%;
+    height: 90%;
+    border-radius: 8px;
+  }
+
+  .frame form {
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+    padding: 0.5rem;
+  }
+
+  .frame form select {
+    height: 40px;
+    width: 30%;
+    font-size: 15px;
+    padding: 5px;
+    background-color: rgb(236, 235, 234);
+    border: 1px solid rgb(209, 209, 209);
+    outline: none;
+    font-family: "poppins", sans-serif;
+    text-transform: capitalize;
+  }
+
+  .frame .large {
+    width: 55%;
+  }
+
+  .frame form button {
+    width: 15%;
+    background-color: rgb(83, 83, 245);
+    outline: none;
+    border: none;
+  }
+
+  .frame form button i {
+    color: white;
+    font-size: 18px;
+  }
+
+/******************* section ****************************/
+
+  section {
+    margin: 2rem;
+    
+  }
+
+  section h3 {
+    font-size: 25px;
+  }
+
+/******************* section1 ****************************/
+
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.desktop {
+  display: block;
+  width: 35%;
+}
+
+.desktop img {
+  width: 100%;
+}
+
+.content {
+  width: 65%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2,200px);
+  gap : 0
+}
+
+.each {
+  text-align: left;
+}
+
+.each img {
+  margin-bottom: .5rem;
+}
+
+/******************* section1 ****************************/
+  
 }
