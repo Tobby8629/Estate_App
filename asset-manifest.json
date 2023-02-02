@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/Estate_App/static/css/main.b43c8198.css",
+    "main.js": "/Estate_App/static/js/main.b3583704.js",
+    "static/js/787.a97c928d.chunk.js": "/Estate_App/static/js/787.a97c928d.chunk.js",
+    "static/media/etienne-beauregard-riverin-B0aCvAVSX8E-unsplashbg.png": "/Estate_App/static/media/etienne-beauregard-riverin-B0aCvAVSX8E-unsplashbg.f47204d0cd4ccece6ab4.png",
+    "static/media/desktop.png": "/Estate_App/static/media/desktop.1e86a18c88765f4b0797.png",
+    "index.html": "/Estate_App/index.html",
+    "main.b43c8198.css.map": "/Estate_App/static/css/main.b43c8198.css.map",
+    "main.b3583704.js.map": "/Estate_App/static/js/main.b3583704.js.map",
+    "787.a97c928d.chunk.js.map": "/Estate_App/static/js/787.a97c928d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b43c8198.css",
+    "static/js/main.b3583704.js"
+  ]
+}
